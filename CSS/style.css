@@ -12,15 +12,26 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 
-.button {
+.pop-up_top {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 5em;
-    display: flex;
+    top: 2%;
+    left: 50%;
+    width: 90%;
+    height: 15rem;
+    transform: translateX(-50%);
+    background-color: #1CBCB8;
+    border-radius: 1.5rem;
+}
+
+.info_pop-up {
+    position: relative;
+    font-size: 3rem;;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    color: white;
 }
 
 .menu_bottom {
@@ -32,7 +43,7 @@ body {
     display: flex;
     background-color: #1CBCB8;
     opacity: 0.9;
-    border-radius:  1rem 1rem 0rem 0rem;
+    border-radius:  1.5rem 1.5rem 0rem 0rem;
 }
 
 .menu_bottom_bar {
@@ -44,7 +55,6 @@ body {
     width: 50%;
     background-color: #1F617E;
     border-radius: 1rem;
-    text-decoration: none;
     border: none;
 }
 
@@ -52,7 +62,7 @@ body {
     position: relative;
     font-size: 3rem;
     color: white;
-    top:  90%;
+    bottom: 10%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 50%);
 }
