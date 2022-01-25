@@ -9,6 +9,7 @@ html {
 
 body {
     overflow: hidden;
+    font-family: 'Outfit', sans-serif;
 }
 
 .button {
@@ -20,4 +21,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.menu_bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    background-color: #1CBCB8;
+    opacity: 0.9;
+    border-radius:  1rem 1rem 0rem 0rem;
+}
+
+.menu_bottom_bar {
+    position: absolute;
+    bottom: 8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 1rem;
+    width: 50%;
+    background-color: #1F617E;
+    border-radius: 1rem;
+    text-decoration: none;
+    border: none;
+}
+
+.text_menu_bottom {
+    position: relative;
+    font-size: 3rem;
+    color: white;
+    top:  90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
