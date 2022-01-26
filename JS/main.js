@@ -8,6 +8,12 @@ function tekst(){
     popup.style.display = "none";
 }
 
+
+function stilte(){
+    document.getElementById("titel").innerHTML = "Hello Dolly.";
+    document.getElementById("tekst").innerHTML = "Hello Dolly.";
+}
+
 function overlayOn() {
     overlaybeeld.style.display = "flex";
 }
