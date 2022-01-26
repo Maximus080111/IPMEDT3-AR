@@ -12,17 +12,25 @@
     <title>AR-IPMEDT3</title>
 </head>
 <body>
-    <section class="pop-up_top">
-        <p class="info_pop-up"> Scan een Hiro marker om info te krijgen!</p>
-    </section>
-    <section class="menu_bottom">
-        <button class="menu_bottom_bar"></button>
-        <p class="text_menu_bottom">Klik voor meer informatie</p>
-    </section>
     <a-scene vr-mode-ui="enabled: false" embedded arjs>
         <a-marker-camera preset="hiro">
             <a-box color="red"></a-box>
         </a-marker-camera>
     </a-scene>
+    <section id="overlay">
+        <button class="exit_button" onclick="overlayOff()">
+            <p class="text_exit_button">X</p>
+        </button>
+        <h1 class="title_overlay">Dit is een titel</h1>
+        <p class="text_overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sint quasi praesentium accusamus labore in velit ab, veritatis esse excepturi consequatur illum harum sequi, voluptas facilis doloribus, rem libero veniam.</p>
+        <img class="foto1" src="IMG/foto1.jpg" alt="foto1">
+    </section>
+    <section class="pop-up_top">
+        <p class="info_pop-up"> Scan een Hiro marker om info te krijgen!</p>
+    </section>
+    <section id="js--menu_bottom" class="menu_bottom" onclick="overlayOn()">
+        <p class="text_menu_bottom">Klik voor meer informatie</p>
+        <button class="menu_bottom_bar" ></button>
+    </section>
 </body>
 </html>
