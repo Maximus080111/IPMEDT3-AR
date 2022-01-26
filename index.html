@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>    
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>  
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
     <script src="JS/main.js" defer></script>
@@ -14,9 +15,22 @@
 <body>
     <a-scene vr-mode-ui="enabled: false" embedded arjs>
         <a-camera>
-            <a-cursor opacity="0"></a-cursor>
-            <a-marker type='pattern' url='pattern1.patt'><a-box color="red" onmouseenter="tekst()"></a-box></a-marker> 
-            <a-marker type='pattern' url='pattern2.patt'><a-box color="green"></a-box></a-marker> 
+            <a-cursor opacity="0.3" color='black'></a-cursor>
+            <a-marker type='pattern' url='patterns/pattern1.patt'>
+                <a-entity scale="0.02 0.02 0.02" position="-0.1 0 -1" rotation="0 180 0" fbx-model="src: url(persoon1.fbx);" shadow="receive: true" animation-mixer></a-entity>
+                <a-gltf-model src="Models/tafel.glb" scale="0.4 0.4 0.4" position="0 0 -4" scale="0.5 0.5 0.5"></a-gltf-model>
+                <a-gltf-model src="Models/toetsenbord.glb" position="0 1.3 -3.5" scale="5 5 5"></a-gltf-model>
+                <a-gltf-model src="Models/ComputerCase.glb" position="1.3 1.25 -4" rotation="0 -90 0" scale="0.3 0.3 0.3"></a-gltf-model>
+                <a-gltf-model src="Models/Computer.glb"  position="0 1.25 -4.2" scale="0.4 0.4 0.4"></a-gltf-model>
+                <a-gltf-model src="Models/Mouse.glb"  position="0.8 1.25 -3.5" scale="0.03 0.03 0.03"></a-gltf-model>
+                <a-gltf-model src="Models/stoel.glb" onmouseenter="tekst()" position="0 0 -2" rotation="0 180 0" scale="0.5 0.5 0.5"></a-gltf-model>
+            </a-marker> 
+            <a-marker type='pattern' url='patterns/pattern2.patt'>
+                <a-entity scale="0.02 0.02 0.02" position="-0.1 0 -2.2" rotation="0 180 0" fbx-model="src: url(persoon2.fbx);" shadow="receive: true" animation-mixer></a-entity>
+                <a-gltf-model src="Models/stoel.glb" onmouseenter="stilte()" position="0 0 -2" rotation="0 180 0" scale="0.5 0.5 0.5"></a-gltf-model>
+                <a-gltf-model src="Models/tafel.glb" scale="0.4 0.4 0.4" position="0 0 -4" scale="5 5 5"></a-gltf-model>
+                <a-gltf-model src="Models/Boek.glb" position="0 1.25 -3.8" scale="0.5 0.5 0.5"></a-gltf-model>
+            </a-marker> 
         </a-camera>    
     </a-scene>
     <section id="overlay">
@@ -24,8 +38,9 @@
             <p class="text_exit_button">X</p>
         </button>
         <h1 id="titel" class="title_overlay">Welkom in het mediacentrum</h1>
-        <p id="tekst" class="text_overlay">Met deze app kan je verschillende marker scannen. Als je een marker hebt gescant geeft het je hier informatie over het bepaalde onderwerp</p>
-        <img class="foto1" src="IMG/marker_1.png" alt="foto1">
+        <p id="tekst" class="text_overlay">Met deze app kan je verschillende marker scannen. Als je een marker hebt gescant geeft het je hier informatie over het bepaalde onderwerp. <br><br> Will je nog meer informatie hebben klik dan op de link</p>
+        <a href="https://www.youtube.com/watch?v=GmGNDI5Q96M&t=19s" class="link_media">Link naar video</a>
+        <img class="foto1" src="IMG/marker_1.png" id="foto_info" alt="foto1">
     </section>
     <section class="pop-up_top">
         <p class="info_pop-up"> Scan een marker om info te krijgen!</p>
