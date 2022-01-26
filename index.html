@@ -7,14 +7,15 @@
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>    
     <link href="https://fonts.googleapis.com/css2?family=Outfit&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="asset/CSS/style.css">
-    <script src="asset/JS/main.js" defer></script>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/main.js" defer></script>
     <title>AR-IPMEDT3</title>
 </head>
 <body>
     <a-scene vr-mode-ui="enabled: false" embedded arjs>
         <a-camera>
-            <a-marker type='pattern' url='pattern1.patt'><a-box color="red"></a-box></a-marker> 
+            <a-cursor opacity="0"></a-cursor>
+            <a-marker type='pattern' url='pattern1.patt'><a-box color="red" onmouseenter="tekst()"></a-box></a-marker> 
             <a-marker type='pattern' url='pattern2.patt'><a-box color="green"></a-box></a-marker> 
         </a-camera>    
     </a-scene>
@@ -23,9 +24,9 @@
             <button class="exit_button" onclick="overlayOff()">
                 <p class="text_exit_button">X</p>
             </button>
-            <h1 class="title_overlay">Dit is een titel</h1>
-            <p class="text_overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sint quasi praesentium accusamus labore in velit ab, veritatis esse excepturi consequatur illum harum sequi, voluptas facilis doloribus, rem libero veniam.</p>
-            <img class="foto1" src="asset/IMG/foto1.jpg" alt="foto1">
+            <h1 id="titel" class="title_overlay">Dit is een titel</h1>
+            <p id="tekst" class="text_overlay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sint quasi praesentium accusamus labore in velit ab, veritatis esse excepturi consequatur illum harum sequi, voluptas facilis doloribus, rem libero veniam.</p>
+            <img class="foto1" src="IMG/foto1.jpg" alt="foto1">
         </section>
         <section class="pop-up_top">
             <p class="info_pop-up"> Scan een test marker om info te krijgen!</p>
