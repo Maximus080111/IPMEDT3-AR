@@ -132,3 +132,14 @@ body {
     top: 45%;
     transform: translateX(-50%);
 }
+
+.link_media {
+    color:#1F617E;
+    font-size: 2rem;
+    position: absolute;
+    width: 50%;
+    left: 50%;
+    top: 39%;
+    transform:  translateX(-50%);
+    text-align: center;
+}
