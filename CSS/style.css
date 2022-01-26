@@ -18,7 +18,7 @@ body {
     top: 2%;
     left: 50%;
     width: 90%;
-    height: 15rem;
+    height: 10rem;
     transform: translateX(-50%);
     background-color: #1CBCB8;
     border-radius: 1.5rem;
@@ -26,7 +26,7 @@ body {
 
 .info_pop-up {
     position: relative;
-    font-size: 3rem;;
+    font-size: 2.5rem;;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -40,7 +40,7 @@ body {
     bottom: 0%;
     left: 0%;
     width: 100%;
-    height: 10rem;
+    height: 8rem;
     display: flex;
     background-color: rgb(28, 188, 184);
     opacity: 0.9;
@@ -49,7 +49,7 @@ body {
 
 .menu_bottom_bar {
     position: absolute;
-    bottom: 8rem;
+    bottom: 6rem;
     left: 50%;
     transform: translateX(-50%);
     height: 1rem;
@@ -61,7 +61,7 @@ body {
 
 .text_menu_bottom {
     position: relative;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
     bottom: 10%;
     left: 50%;
@@ -106,7 +106,7 @@ body {
     font-size: 4rem;
     color: white;
     left: 50%;
-    top: 15%;
+    top: 10%;
     width: 80%;
     text-align: center;
     transform: translateX(-50%);
@@ -115,7 +115,7 @@ body {
 .text_overlay {
     color: white;
     position: absolute;
-    top: 25%;
+    top: 23%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -124,11 +124,11 @@ body {
 }
 
 .foto1 {
+    display: flex;
     position: absolute;
     width: 80%;
     height: 30rem;
     left: 50%;
-    top: 40%;
+    top: 45%;
     transform: translateX(-50%);
-
 }
