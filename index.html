@@ -13,7 +13,10 @@
 </head>
 <body>
     <a-scene vr-mode-ui="enabled: false" embedded arjs>
-        <a-marker-camera type='pattern' url='pattern1.patt'><a-box color="red"></a-box></a-marker-camera>     
+        <a-camera>
+            <a-marker type='pattern' url='pattern1.patt'><a-box color="red"></a-box></a-marker> 
+            <a-marker type='pattern' url='pattern2.patt'><a-box color="green"></a-box></a-marker> 
+        </a-camera>    
     </a-scene>
     <section id="overlay">
         <button class="exit_button" onclick="overlayOff()">
