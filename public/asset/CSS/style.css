@@ -5,11 +5,12 @@
 
 html {
     font-size: 62.5%;
+    height: 100vh;
+    overflow: hidden;
 }
 
 body {
     font-family: 'Outfit', sans-serif;
-    overflow: hidden;
 }
 
 .pop-up_top {
@@ -38,7 +39,7 @@ body {
     position: absolute;
     bottom: 0%;
     left: 0%;
-    width: 100%;
+    width: 100vw;
     height: 10rem;
     display: flex;
     background-color: rgb(28, 188, 184);
